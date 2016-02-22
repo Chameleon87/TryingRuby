@@ -10,11 +10,11 @@ class ArticlesController < ApplicationController
     end
 
     def new
-        @article = Article.new(params[:id])
+        @article = Article.new
     end
 
     def edit 
-        @Article.find(params[:id])
+        @article.find(params[:id])
     end
 
     def create
