@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
+<<<<<<< HEAD
     include ArticlesHelper
+=======
+>>>>>>> d292fa03db7ef04ceddf0f68bb512a10b9c3ddb5
     http_basic_authenticate_with name: "jesse", password: "hodge",
         except: [:index, :show]
     def index
@@ -15,7 +18,11 @@ class ArticlesController < ApplicationController
     end
 
     def edit 
+<<<<<<< HEAD
         @article = Article.find(params[:id])
+=======
+        @article.find(params[:id])
+>>>>>>> d292fa03db7ef04ceddf0f68bb512a10b9c3ddb5
     end
 
     def create
@@ -44,4 +51,12 @@ class ArticlesController < ApplicationController
 
         redirect_to articles_path
     end
+<<<<<<< HEAD
+=======
+
+    private 
+        def article_params
+            params.require(:article).permit(:title, :text)
+        end
+>>>>>>> d292fa03db7ef04ceddf0f68bb512a10b9c3ddb5
 end

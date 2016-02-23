@@ -29,3 +29,20 @@
   </p>
  
 <% end %>
+<<<<<<< HEAD
+=======
+
+<%= form_for ([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+>>>>>>> d292fa03db7ef04ceddf0f68bb512a10b9c3ddb5
